@@ -4,7 +4,7 @@ export default ({ env }) => ({
             jwtSecret: env('JWT_SECRET'),
         },
     },
-    upload: env('STORAGE', 's3') === 's3' ? s3FileStorageConfig(env) : localFileStorageConfig(),
+    upload: env('STORAGE', 's3') === 'local' ? localFileStorageConfig() : s3FileStorageConfig(env),
 });
 
 const localFileStorageConfig = () => ({
