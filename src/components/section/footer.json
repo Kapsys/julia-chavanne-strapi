@@ -23,9 +23,6 @@
     },
     "kapsysLogoLink": {
       "type": "string"
-    },
-    "test": {
-      "type": "string"
     }
   }
 }

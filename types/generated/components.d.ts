@@ -13,7 +13,6 @@ export interface SectionFooter extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     kapsysLogoLink: Schema.Attribute.String;
-    test: Schema.Attribute.String;
   };
 }
 
