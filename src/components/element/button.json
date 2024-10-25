@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_element_buttons",
+  "info": {
+    "displayName": "Button",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "buttonName": {
+      "type": "string"
+    },
+    "buttonUrl": {
+      "type": "string"
+    },
+    "buttonIcon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -13,6 +13,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
   attributes: {
     footer: Schema.Attribute.Component<'section.footer', false>;
+    header: Schema.Attribute.Component<'section.header', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_section_headers",
+  "info": {
+    "displayName": "Header",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "menuItems": {
+      "displayName": "Menu Items",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.menu-items"
+    },
+    "socials": {
+      "displayName": "Socials",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.socials"
+    },
+    "button": {
+      "displayName": "Button",
+      "type": "component",
+      "repeatable": false,
+      "component": "element.button"
+    }
+  }
+}

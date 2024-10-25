@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_element_menu_items",
+  "info": {
+    "displayName": "Menu Items",
+    "icon": "cast",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "menuItem": {
+      "type": "string"
+    },
+    "menuItemUrl": {
+      "type": "string"
+    }
+  }
+}
