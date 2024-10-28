@@ -27,6 +27,8 @@ export interface SectionFooter extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     kapsysLogoLink: Schema.Attribute.String;
+    FooterText: Schema.Attribute.String;
+    socials: Schema.Attribute.Component<'element.socials', true>;
   };
 }
 

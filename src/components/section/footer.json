@@ -23,6 +23,19 @@
     },
     "kapsysLogoLink": {
       "type": "string"
+    },
+    "FooterText": {
+      "type": "string"
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.socials"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.button"
     }
   }
 }
