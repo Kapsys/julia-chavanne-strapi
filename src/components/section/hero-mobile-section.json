@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_section_hero_mobile_sections",
+  "info": {
+    "displayName": "Hero Mobile Section",
+    "icon": "message",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "badge": {
+      "displayName": "Badge",
+      "type": "component",
+      "repeatable": false,
+      "component": "element.badge"
+    },
+    "Tip": {
+      "type": "string"
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.socials"
+    }
+  }
+}

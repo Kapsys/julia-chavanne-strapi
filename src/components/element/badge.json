@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_element_badges",
+  "info": {
+    "displayName": "Badge",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "flag": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "country": {
+      "type": "string"
+    }
+  }
+}

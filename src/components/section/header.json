@@ -22,7 +22,7 @@
     "button": {
       "displayName": "Button",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "element.button"
     }
   }
