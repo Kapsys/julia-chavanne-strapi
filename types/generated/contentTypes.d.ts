@@ -564,40 +564,6 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiPagePage extends Struct.CollectionTypeSchema {
-  collectionName: 'pages';
-  info: {
-    singularName: 'page';
-    pluralName: 'pages';
-    displayName: 'Page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    dynamicSections: Schema.Attribute.DynamicZone<
-      [
-        'section.hero-mobile-section',
-        'section.exclusive-content-block-mobile-section',
-      ]
-    >;
-    seo: Schema.Attribute.Component<'shared.seo', false>;
-    title: Schema.Attribute.String;
-    slug: Schema.Attribute.UID<'title'>;
-    createdAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    publishedAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -982,7 +948,6 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::global.global': ApiGlobalGlobal;
       'api::homepage.homepage': ApiHomepageHomepage;
-      'api::page.page': ApiPagePage;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;
