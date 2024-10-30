@@ -48,6 +48,10 @@ export interface SectionHeroMobileSection extends Struct.ComponentSchema {
     badge: Schema.Attribute.Component<'element.badge', false>;
     Tip: Schema.Attribute.String;
     socials: Schema.Attribute.Component<'element.socials', true>;
+    name: Schema.Attribute.String;
+    verifiedTicket: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 
