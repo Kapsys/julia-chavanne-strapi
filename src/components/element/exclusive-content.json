@@ -2,22 +2,9 @@
   "collectionName": "components_element_exclusive_contents",
   "info": {
     "displayName": "Exclusive Content",
-    "icon": "earth"
+    "icon": "earth",
+    "description": ""
   },
   "options": {},
-  "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "icon": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    }
-  }
+  "attributes": {}
 }

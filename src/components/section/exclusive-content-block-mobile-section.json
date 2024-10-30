@@ -7,12 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "exclusiveContent": {
-      "displayName": "Exclusive Content",
-      "type": "component",
-      "repeatable": true,
-      "component": "element.exclusive-content"
-    },
     "gallery": {
       "type": "component",
       "repeatable": true,
@@ -20,8 +14,21 @@
     },
     "button": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "element.button"
+    },
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

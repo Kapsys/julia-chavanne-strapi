@@ -93,12 +93,10 @@ export interface SectionExclusiveContentBlockMobileSection
     description: '';
   };
   attributes: {
-    exclusiveContent: Schema.Attribute.Component<
-      'element.exclusive-content',
-      true
-    >;
     gallery: Schema.Attribute.Component<'element.gallery', true>;
-    button: Schema.Attribute.Component<'element.button', false>;
+    button: Schema.Attribute.Component<'element.button', true>;
+    title: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -146,11 +144,9 @@ export interface ElementExclusiveContent extends Struct.ComponentSchema {
   info: {
     displayName: 'Exclusive Content';
     icon: 'earth';
+    description: '';
   };
-  attributes: {
-    title: Schema.Attribute.String;
-    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-  };
+  attributes: {};
 }
 
 export interface ElementButton extends Struct.ComponentSchema {
