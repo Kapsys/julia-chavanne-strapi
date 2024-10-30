@@ -15,13 +15,21 @@
     "dynamicSections": {
       "type": "dynamiczone",
       "components": [
-        "section.hero-mobile-section"
+        "section.hero-mobile-section",
+        "section.exclusive-content-block-mobile-section"
       ]
     },
     "seo": {
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

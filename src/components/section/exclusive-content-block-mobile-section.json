@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_section_exclusive_content_block_mobile_sections",
+  "info": {
+    "displayName": "Exclusive Content Block Mobile Section",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "exclusiveContent": {
+      "displayName": "Exclusive Content",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.exclusive-content"
+    },
+    "gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.gallery"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.button"
+    }
+  }
+}

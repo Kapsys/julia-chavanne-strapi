@@ -538,9 +538,14 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
   };
   attributes: {
     dynamicSections: Schema.Attribute.DynamicZone<
-      ['section.hero-mobile-section']
+      [
+        'section.hero-mobile-section',
+        'section.exclusive-content-block-mobile-section',
+      ]
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
+    title: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'title'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

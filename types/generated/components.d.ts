@@ -84,6 +84,24 @@ export interface SectionFooter extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionExclusiveContentBlockMobileSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_section_exclusive_content_block_mobile_sections';
+  info: {
+    displayName: 'Exclusive Content Block Mobile Section';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    exclusiveContent: Schema.Attribute.Component<
+      'element.exclusive-content',
+      true
+    >;
+    gallery: Schema.Attribute.Component<'element.gallery', true>;
+    button: Schema.Attribute.Component<'element.button', false>;
+  };
+}
+
 export interface ElementSocials extends Struct.ComponentSchema {
   collectionName: 'components_element_socials';
   info: {
@@ -109,6 +127,29 @@ export interface ElementMenuItems extends Struct.ComponentSchema {
   attributes: {
     menuItem: Schema.Attribute.String;
     menuItemUrl: Schema.Attribute.String;
+  };
+}
+
+export interface ElementGallery extends Struct.ComponentSchema {
+  collectionName: 'components_element_galleries';
+  info: {
+    displayName: 'Gallery';
+    icon: 'filter';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface ElementExclusiveContent extends Struct.ComponentSchema {
+  collectionName: 'components_element_exclusive_contents';
+  info: {
+    displayName: 'Exclusive Content';
+    icon: 'earth';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -148,8 +189,11 @@ declare module '@strapi/strapi' {
       'section.hero-mobile-section': SectionHeroMobileSection;
       'section.header': SectionHeader;
       'section.footer': SectionFooter;
+      'section.exclusive-content-block-mobile-section': SectionExclusiveContentBlockMobileSection;
       'element.socials': ElementSocials;
       'element.menu-items': ElementMenuItems;
+      'element.gallery': ElementGallery;
+      'element.exclusive-content': ElementExclusiveContent;
       'element.button': ElementButton;
       'element.badge': ElementBadge;
     }
