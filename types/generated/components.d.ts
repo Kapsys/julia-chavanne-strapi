@@ -106,11 +106,11 @@ export interface SectionExclusiveContentBlockMobileSection
     button: Schema.Attribute.Component<'element.button', true>;
     title: Schema.Attribute.String;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     overlayIcon: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
     overlayText: Schema.Attribute.String;
+    gallery: Schema.Attribute.Component<'element.gallery', true>;
   };
 }
 
@@ -126,6 +126,11 @@ export interface ElementSocials extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     socialUrl: Schema.Attribute.String;
+    socialColoredIcon: Schema.Attribute.String;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
   };
 }
 
@@ -149,7 +154,9 @@ export interface ElementGallery extends Struct.ComponentSchema {
     icon: 'filter';
     description: '';
   };
-  attributes: {};
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
 }
 
 export interface ElementExclusiveContent extends Struct.ComponentSchema {

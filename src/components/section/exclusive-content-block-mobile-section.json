@@ -26,7 +26,7 @@
         "audios"
       ]
     },
-    "image": {
+    "overlayIcon": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -37,18 +37,13 @@
         "audios"
       ]
     },
-    "overlayIcon": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "overlayText": {
       "type": "string"
+    },
+    "gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.gallery"
     }
   }
 }

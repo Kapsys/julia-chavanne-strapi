@@ -8,6 +8,23 @@
   "options": {},
   "attributes": {
     "socialIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "socialUrl": {
+      "type": "string"
+    },
+    "socialColoredIcon": {
+      "type": "string"
+    },
+    "image": {
       "allowedTypes": [
         "images",
         "files",
@@ -15,10 +32,7 @@
         "audios"
       ],
       "type": "media",
-      "multiple": false
-    },
-    "socialUrl": {
-      "type": "string"
+      "multiple": true
     }
   }
 }
