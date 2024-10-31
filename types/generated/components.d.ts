@@ -66,6 +66,9 @@ export interface SectionHeader extends Struct.ComponentSchema {
     menuItems: Schema.Attribute.Component<'element.menu-items', true>;
     socials: Schema.Attribute.Component<'element.socials', true>;
     button: Schema.Attribute.Component<'element.button', true>;
+    headerlogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 
