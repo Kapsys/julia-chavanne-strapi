@@ -2,19 +2,9 @@
   "collectionName": "components_element_galleries",
   "info": {
     "displayName": "Gallery",
-    "icon": "filter"
+    "icon": "filter",
+    "description": ""
   },
   "options": {},
-  "attributes": {
-    "image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    }
-  }
+  "attributes": {}
 }

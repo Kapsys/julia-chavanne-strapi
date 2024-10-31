@@ -97,10 +97,14 @@ export interface SectionExclusiveContentBlockMobileSection
     description: '';
   };
   attributes: {
-    gallery: Schema.Attribute.Component<'element.gallery', true>;
     button: Schema.Attribute.Component<'element.button', true>;
     title: Schema.Attribute.String;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    overlayIcon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    overlayText: Schema.Attribute.String;
   };
 }
 
@@ -137,10 +141,9 @@ export interface ElementGallery extends Struct.ComponentSchema {
   info: {
     displayName: 'Gallery';
     icon: 'filter';
+    description: '';
   };
-  attributes: {
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-  };
+  attributes: {};
 }
 
 export interface ElementExclusiveContent extends Struct.ComponentSchema {

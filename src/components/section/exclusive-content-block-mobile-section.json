@@ -7,11 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "gallery": {
-      "type": "component",
-      "repeatable": true,
-      "component": "element.gallery"
-    },
     "button": {
       "type": "component",
       "repeatable": true,
@@ -21,6 +16,28 @@
       "type": "string"
     },
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "overlayIcon": {
       "allowedTypes": [
         "images",
         "files",
@@ -29,6 +46,9 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "overlayText": {
+      "type": "string"
     }
   }
 }
