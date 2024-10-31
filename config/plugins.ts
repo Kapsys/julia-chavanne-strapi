@@ -5,6 +5,11 @@ export default ({ env }) => ({
         },
     },
     upload: env('STORAGE', 's3') === 'local' ? localFileStorageConfig() : s3FileStorageConfig(env),
+    'strapi-plugin-populate-deep': {
+        config: {
+            defaultDepth: 5,
+        },
+    },
 });
 
 const localFileStorageConfig = () => ({
