@@ -36,6 +36,16 @@
       "type": "component",
       "repeatable": false,
       "component": "element.button"
+    },
+    "kapsysLogoText": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

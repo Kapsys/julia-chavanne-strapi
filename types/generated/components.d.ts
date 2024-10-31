@@ -85,6 +85,9 @@ export interface SectionFooter extends Struct.ComponentSchema {
     FooterText: Schema.Attribute.String;
     socials: Schema.Attribute.Component<'element.socials', true>;
     button: Schema.Attribute.Component<'element.button', false>;
+    kapsysLogoText: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 
