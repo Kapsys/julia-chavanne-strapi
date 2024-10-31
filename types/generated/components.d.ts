@@ -126,11 +126,14 @@ export interface ElementSocials extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     socialUrl: Schema.Attribute.String;
-    socialColoredIcon: Schema.Attribute.String;
     image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    socialColoredIcon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    title: Schema.Attribute.String;
   };
 }
 
