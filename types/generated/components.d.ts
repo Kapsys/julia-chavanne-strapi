@@ -36,6 +36,26 @@ export interface SharedMetaSocial extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+    icon: 'layer';
+    description: '';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    name: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    button: Schema.Attribute.Component<'element.button', false>;
+    socials: Schema.Attribute.Component<'element.socials', true>;
+    partners: Schema.Attribute.Component<'element.partners', true>;
+  };
+}
+
 export interface SectionHeroMobileSection extends Struct.ComponentSchema {
   collectionName: 'components_section_hero_mobile_sections';
   info: {
@@ -137,6 +157,19 @@ export interface ElementSocials extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementPartners extends Struct.ComponentSchema {
+  collectionName: 'components_element_partners';
+  info: {
+    displayName: 'Partners';
+  };
+  attributes: {
+    partnerLogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    partnerLink: Schema.Attribute.String;
+  };
+}
+
 export interface ElementMenuItems extends Struct.ComponentSchema {
   collectionName: 'components_element_menu_items';
   info: {
@@ -205,11 +238,13 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
+      'section.hero-section': SectionHeroSection;
       'section.hero-mobile-section': SectionHeroMobileSection;
       'section.header': SectionHeader;
       'section.footer': SectionFooter;
       'section.exclusive-content-block-mobile-section': SectionExclusiveContentBlockMobileSection;
       'element.socials': ElementSocials;
+      'element.partners': ElementPartners;
       'element.menu-items': ElementMenuItems;
       'element.gallery': ElementGallery;
       'element.exclusive-content': ElementExclusiveContent;

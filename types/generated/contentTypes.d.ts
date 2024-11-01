@@ -548,6 +548,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       true
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
+    heroSection: Schema.Attribute.Component<'section.hero-section', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

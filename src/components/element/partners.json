@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_element_partners",
+  "info": {
+    "displayName": "Partners"
+  },
+  "options": {},
+  "attributes": {
+    "partnerLogo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "partnerLink": {
+      "type": "string"
+    }
+  }
+}
