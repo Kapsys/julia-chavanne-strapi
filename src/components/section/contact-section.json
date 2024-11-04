@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_section_contact_sections",
+  "info": {
+    "displayName": "Contact Section",
+    "icon": "database"
+  },
+  "options": {},
+  "attributes": {
+    "entrySection": {
+      "displayName": "Entry Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "element.entry-section"
+    }
+  }
+}

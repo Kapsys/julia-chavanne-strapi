@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_section_lascana_sections",
+  "info": {
+    "displayName": "Lascana Section",
+    "icon": "expand",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button": {
+      "displayName": "Button",
+      "type": "component",
+      "repeatable": false,
+      "component": "element.button"
+    },
+    "gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.gallery"
+    }
+  }
+}

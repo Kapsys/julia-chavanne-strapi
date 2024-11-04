@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_section_podcast_sections",
+  "info": {
+    "displayName": "Podcast Section",
+    "icon": "typhoon"
+  },
+  "options": {},
+  "attributes": {
+     "entrySection": {
+      "displayName": "Entry Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "element.entry-section"
+    },
+    "gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.gallery"
+    }
+  }
+}

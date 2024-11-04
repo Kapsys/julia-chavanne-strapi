@@ -52,6 +52,18 @@ export interface SectionStatisticsSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionPodcastSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_podcast_sections';
+  info: {
+    displayName: 'Podcast Section';
+    icon: 'typhoon';
+  };
+  attributes: {
+    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+    gallery: Schema.Attribute.Component<'element.gallery', true>;
+  };
+}
+
 export interface SectionOnlyfansSection extends Struct.ComponentSchema {
   collectionName: 'components_section_onlyfans_sections';
   info: {
@@ -64,6 +76,22 @@ export interface SectionOnlyfansSection extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+  };
+}
+
+export interface SectionLascanaSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_lascana_sections';
+  info: {
+    displayName: 'Lascana Section';
+    icon: 'expand';
+    description: '';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    button: Schema.Attribute.Component<'element.button', false>;
+    gallery: Schema.Attribute.Component<'element.gallery', true>;
   };
 }
 
@@ -162,6 +190,17 @@ export interface SectionExclusiveContentBlockMobileSection
     >;
     overlayText: Schema.Attribute.String;
     gallery: Schema.Attribute.Component<'element.gallery', true>;
+  };
+}
+
+export interface SectionContactSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_contact_sections';
+  info: {
+    displayName: 'Contact Section';
+    icon: 'database';
+  };
+  attributes: {
+    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
   };
 }
 
@@ -313,12 +352,15 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
       'section.statistics-section': SectionStatisticsSection;
+      'section.podcast-section': SectionPodcastSection;
       'section.onlyfans-section': SectionOnlyfansSection;
+      'section.lascana-section': SectionLascanaSection;
       'section.hero-section': SectionHeroSection;
       'section.hero-mobile-section': SectionHeroMobileSection;
       'section.header': SectionHeader;
       'section.footer': SectionFooter;
       'section.exclusive-content-block-mobile-section': SectionExclusiveContentBlockMobileSection;
+      'section.contact-section': SectionContactSection;
       'section.about-section': SectionAboutSection;
       'element.socials': ElementSocials;
       'element.social-statistics-block': ElementSocialStatisticsBlock;

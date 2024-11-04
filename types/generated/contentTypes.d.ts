@@ -558,6 +558,18 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       'section.onlyfans-section',
       false
     >;
+    lascanaSection: Schema.Attribute.Component<
+      'section.lascana-section',
+      false
+    >;
+    podcastSection: Schema.Attribute.Component<
+      'section.podcast-section',
+      false
+    >;
+    contactSection: Schema.Attribute.Component<
+      'section.contact-section',
+      false
+    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
