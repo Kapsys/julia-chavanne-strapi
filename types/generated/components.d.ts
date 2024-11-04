@@ -45,6 +45,10 @@ export interface SectionStatisticsSection extends Struct.ComponentSchema {
   };
   attributes: {
     entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+    socialStatisticsBlock: Schema.Attribute.Component<
+      'element.social-statistics-block',
+      true
+    >;
   };
 }
 

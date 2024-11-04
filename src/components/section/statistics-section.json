@@ -12,6 +12,12 @@
       "type": "component",
       "repeatable": false,
       "component": "element.entry-section"
+    },
+    "socialStatisticsBlock": {
+      "displayName": "Social statistics block",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.social-statistics-block"
     }
   }
 }
