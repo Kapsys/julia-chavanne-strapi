@@ -134,6 +134,22 @@ export interface SectionExclusiveContentBlockMobileSection
   };
 }
 
+export interface SectionAboutSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_about_sections';
+  info: {
+    displayName: 'About Section';
+    icon: 'stack';
+    description: '';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    button: Schema.Attribute.Component<'element.button', false>;
+    gallery: Schema.Attribute.Component<'element.gallery', true>;
+  };
+}
+
 export interface ElementSocials extends Struct.ComponentSchema {
   collectionName: 'components_element_socials';
   info: {
@@ -243,6 +259,7 @@ declare module '@strapi/strapi' {
       'section.header': SectionHeader;
       'section.footer': SectionFooter;
       'section.exclusive-content-block-mobile-section': SectionExclusiveContentBlockMobileSection;
+      'section.about-section': SectionAboutSection;
       'element.socials': ElementSocials;
       'element.partners': ElementPartners;
       'element.menu-items': ElementMenuItems;
