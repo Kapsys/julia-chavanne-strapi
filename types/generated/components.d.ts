@@ -52,6 +52,21 @@ export interface SectionStatisticsSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionOnlyfansSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_onlyfans_sections';
+  info: {
+    displayName: 'Onlyfans Section';
+    icon: 'landscape';
+    description: '';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+  };
+}
+
 export interface SectionHeroSection extends Struct.ComponentSchema {
   collectionName: 'components_section_hero_sections';
   info: {
@@ -298,6 +313,7 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
       'section.statistics-section': SectionStatisticsSection;
+      'section.onlyfans-section': SectionOnlyfansSection;
       'section.hero-section': SectionHeroSection;
       'section.hero-mobile-section': SectionHeroMobileSection;
       'section.header': SectionHeader;

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_section_onlyfans_sections",
+  "info": {
+    "displayName": "Onlyfans Section",
+    "icon": "landscape",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "backgroundImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+     "entrySection": {
+      "displayName": "Entry Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "element.entry-section"
+    }
+  }
+}

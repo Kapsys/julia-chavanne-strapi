@@ -554,6 +554,10 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       'section.statistics-section',
       false
     >;
+    onlyfansSection: Schema.Attribute.Component<
+      'section.onlyfans-section',
+      false
+    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

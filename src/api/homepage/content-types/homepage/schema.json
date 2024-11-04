@@ -51,6 +51,12 @@
       "type": "component",
       "repeatable": false,
       "component": "section.statistics-section"
+    },
+    "onlyfansSection": {
+      "displayName": "Onlyfans Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.onlyfans-section"
     }
   }
 }
