@@ -257,10 +257,6 @@ export interface ElementEntrySection extends Struct.ComponentSchema {
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     button: Schema.Attribute.Component<'element.button', true>;
-    socialstatisticsblock: Schema.Attribute.Component<
-      'element.social-statistics-block',
-      true
-    >;
   };
 }
 

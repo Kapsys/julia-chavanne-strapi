@@ -21,12 +21,6 @@
       "type": "component",
       "repeatable": true,
       "component": "element.button"
-    },
-    "socialstatisticsblock": {
-      "displayName": "Social statistics block",
-      "type": "component",
-      "repeatable": true,
-      "component": "element.social-statistics-block"
     }
   }
 }
