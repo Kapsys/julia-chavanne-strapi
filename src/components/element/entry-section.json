@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_element_entry_sections",
+  "info": {
+    "displayName": "Entry Section",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button": {
+      "displayName": "Button",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.button"
+    },
+    "socialstatisticsblock": {
+      "displayName": "Social statistics block",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.social-statistics-block"
+    }
+  }
+}

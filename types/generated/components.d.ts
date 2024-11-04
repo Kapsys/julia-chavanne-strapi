@@ -36,6 +36,18 @@ export interface SharedMetaSocial extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionStatisticsSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_statistics_sections';
+  info: {
+    displayName: 'Statistics Section';
+    icon: 'paintBrush';
+    description: '';
+  };
+  attributes: {
+    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+  };
+}
+
 export interface SectionHeroSection extends Struct.ComponentSchema {
   collectionName: 'components_section_hero_sections';
   info: {
@@ -142,10 +154,7 @@ export interface SectionAboutSection extends Struct.ComponentSchema {
     description: '';
   };
   attributes: {
-    subtitle: Schema.Attribute.String;
-    title: Schema.Attribute.String;
-    description: Schema.Attribute.Text;
-    button: Schema.Attribute.Component<'element.button', false>;
+    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
     gallery: Schema.Attribute.Component<'element.gallery', true>;
   };
 }
@@ -170,6 +179,21 @@ export interface ElementSocials extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementSocialStatisticsBlock extends Struct.ComponentSchema {
+  collectionName: 'components_element_social_statistics_blocks';
+  info: {
+    displayName: 'Social statistics block';
+    icon: 'link';
+    description: '';
+  };
+  attributes: {
+    socials: Schema.Attribute.Component<'element.socials', false>;
+    number: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+    button: Schema.Attribute.Component<'element.button', false>;
   };
 }
 
@@ -221,6 +245,25 @@ export interface ElementExclusiveContent extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface ElementEntrySection extends Struct.ComponentSchema {
+  collectionName: 'components_element_entry_sections';
+  info: {
+    displayName: 'Entry Section';
+    icon: 'dashboard';
+    description: '';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    button: Schema.Attribute.Component<'element.button', true>;
+    socialstatisticsblock: Schema.Attribute.Component<
+      'element.social-statistics-block',
+      true
+    >;
+  };
+}
+
 export interface ElementButton extends Struct.ComponentSchema {
   collectionName: 'components_element_buttons';
   info: {
@@ -254,6 +297,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
+      'section.statistics-section': SectionStatisticsSection;
       'section.hero-section': SectionHeroSection;
       'section.hero-mobile-section': SectionHeroMobileSection;
       'section.header': SectionHeader;
@@ -261,10 +305,12 @@ declare module '@strapi/strapi' {
       'section.exclusive-content-block-mobile-section': SectionExclusiveContentBlockMobileSection;
       'section.about-section': SectionAboutSection;
       'element.socials': ElementSocials;
+      'element.social-statistics-block': ElementSocialStatisticsBlock;
       'element.partners': ElementPartners;
       'element.menu-items': ElementMenuItems;
       'element.gallery': ElementGallery;
       'element.exclusive-content': ElementExclusiveContent;
+      'element.entry-section': ElementEntrySection;
       'element.button': ElementButton;
       'element.badge': ElementBadge;
     }

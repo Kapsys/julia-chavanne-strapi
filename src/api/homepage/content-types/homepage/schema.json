@@ -45,6 +45,12 @@
       "type": "component",
       "repeatable": true,
       "component": "section.about-section"
+    },
+    "statisticsSection": {
+      "displayName": "Statistics Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.statistics-section"
     }
   }
 }

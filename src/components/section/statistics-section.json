@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_section_about_sections",
+  "collectionName": "components_section_statistics_sections",
   "info": {
-    "displayName": "About Section",
-    "icon": "stack",
+    "displayName": "Statistics Section",
+    "icon": "paintBrush",
     "description": ""
   },
   "options": {},
@@ -12,11 +12,6 @@
       "type": "component",
       "repeatable": false,
       "component": "element.entry-section"
-    },
-    "gallery": {
-      "type": "component",
-      "repeatable": true,
-      "component": "element.gallery"
     }
   }
 }
