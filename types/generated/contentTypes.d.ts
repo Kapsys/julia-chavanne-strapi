@@ -549,7 +549,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     heroSection: Schema.Attribute.Component<'section.hero-section', false>;
-    aboutSection: Schema.Attribute.Component<'section.about-section', true>;
+    aboutSection: Schema.Attribute.Component<'section.about-section', false>;
     statisticsSection: Schema.Attribute.Component<
       'section.statistics-section',
       false

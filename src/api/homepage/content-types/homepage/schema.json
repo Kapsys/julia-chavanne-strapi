@@ -43,7 +43,7 @@
     "aboutSection": {
       "displayName": "About Section",
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "section.about-section"
     },
     "statisticsSection": {
