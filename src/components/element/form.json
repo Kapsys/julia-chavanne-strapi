@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_element_forms",
+  "info": {
+    "displayName": "Form",
+    "icon": "house",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "formInputs": {
+      "displayName": "Form Inputs",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.form-inputs"
+    },
+    "checkboxText": {
+      "type": "string"
+    },
+    "privacyPolicyText": {
+      "type": "string"
+    },
+    "privacyPolicyUrl": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.button"
+    }
+  }
+}

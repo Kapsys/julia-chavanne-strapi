@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_element_form_inputs",
+  "info": {
+    "displayName": "Form Inputs",
+    "icon": "write",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "phone",
+        "email",
+        "textarea"
+      ]
+    }
+  }
+}

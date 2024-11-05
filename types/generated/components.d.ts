@@ -87,11 +87,13 @@ export interface SectionLascanaSection extends Struct.ComponentSchema {
     description: '';
   };
   attributes: {
-    subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     button: Schema.Attribute.Component<'element.button', false>;
     gallery: Schema.Attribute.Component<'element.gallery', true>;
+    lascanaIcon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 
@@ -198,9 +200,11 @@ export interface SectionContactSection extends Struct.ComponentSchema {
   info: {
     displayName: 'Contact Section';
     icon: 'database';
+    description: '';
   };
   attributes: {
     entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+    form: Schema.Attribute.Component<'element.form', false>;
   };
 }
 
@@ -293,6 +297,36 @@ export interface ElementGallery extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementForm extends Struct.ComponentSchema {
+  collectionName: 'components_element_forms';
+  info: {
+    displayName: 'Form';
+    icon: 'house';
+    description: '';
+  };
+  attributes: {
+    formInputs: Schema.Attribute.Component<'element.form-inputs', true>;
+    checkboxText: Schema.Attribute.String;
+    privacyPolicyText: Schema.Attribute.String;
+    privacyPolicyUrl: Schema.Attribute.String;
+    button: Schema.Attribute.Component<'element.button', false>;
+  };
+}
+
+export interface ElementFormInputs extends Struct.ComponentSchema {
+  collectionName: 'components_element_form_inputs';
+  info: {
+    displayName: 'Form Inputs';
+    icon: 'write';
+    description: '';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<['text', 'phone', 'email', 'textarea']>;
+  };
+}
+
 export interface ElementExclusiveContent extends Struct.ComponentSchema {
   collectionName: 'components_element_exclusive_contents';
   info: {
@@ -367,6 +401,8 @@ declare module '@strapi/strapi' {
       'element.partners': ElementPartners;
       'element.menu-items': ElementMenuItems;
       'element.gallery': ElementGallery;
+      'element.form': ElementForm;
+      'element.form-inputs': ElementFormInputs;
       'element.exclusive-content': ElementExclusiveContent;
       'element.entry-section': ElementEntrySection;
       'element.button': ElementButton;

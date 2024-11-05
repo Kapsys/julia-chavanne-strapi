@@ -7,9 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "subtitle": {
-      "type": "string"
-    },
     "title": {
       "type": "string"
     },
@@ -26,6 +23,16 @@
       "type": "component",
       "repeatable": true,
       "component": "element.gallery"
+    },
+    "lascanaIcon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
