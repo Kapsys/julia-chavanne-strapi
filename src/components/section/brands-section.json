@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_section_brands_sections",
+  "info": {
+    "displayName": "Brands Section",
+    "icon": "plane"
+  },
+  "options": {},
+  "attributes": {
+    "entrySection": {
+      "displayName": "Entry Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "element.entry-section"
+    },
+    "partners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.partners"
+    }
+  }
+}

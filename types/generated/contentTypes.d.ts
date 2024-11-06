@@ -631,6 +631,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       'section.contact-section',
       false
     >;
+    brandsSection: Schema.Attribute.Component<'section.brands-section', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

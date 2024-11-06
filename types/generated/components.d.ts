@@ -208,6 +208,18 @@ export interface SectionContactSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionBrandsSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_brands_sections';
+  info: {
+    displayName: 'Brands Section';
+    icon: 'plane';
+  };
+  attributes: {
+    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+    partners: Schema.Attribute.Component<'element.partners', true>;
+  };
+}
+
 export interface SectionAboutSection extends Struct.ComponentSchema {
   collectionName: 'components_section_about_sections';
   info: {
@@ -395,6 +407,7 @@ declare module '@strapi/strapi' {
       'section.footer': SectionFooter;
       'section.exclusive-content-block-mobile-section': SectionExclusiveContentBlockMobileSection;
       'section.contact-section': SectionContactSection;
+      'section.brands-section': SectionBrandsSection;
       'section.about-section': SectionAboutSection;
       'element.socials': ElementSocials;
       'element.social-statistics-block': ElementSocialStatisticsBlock;

@@ -75,6 +75,12 @@
       "type": "component",
       "repeatable": false,
       "component": "section.contact-section"
+    },
+    "brandsSection": {
+      "displayName": "Brands Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.brands-section"
     }
   }
 }
