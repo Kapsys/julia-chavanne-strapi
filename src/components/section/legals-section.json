@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_section_legals_sections",
+  "info": {
+    "displayName": "Legals Section",
+    "icon": "priceTag"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}

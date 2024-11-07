@@ -79,6 +79,18 @@ export interface SectionOnlyfansSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionLegalsSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_legals_sections';
+  info: {
+    displayName: 'Legals Section';
+    icon: 'priceTag';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Blocks;
+  };
+}
+
 export interface SectionLascanaSection extends Struct.ComponentSchema {
   collectionName: 'components_section_lascana_sections';
   info: {
@@ -400,6 +412,7 @@ declare module '@strapi/strapi' {
       'section.statistics-section': SectionStatisticsSection;
       'section.podcast-section': SectionPodcastSection;
       'section.onlyfans-section': SectionOnlyfansSection;
+      'section.legals-section': SectionLegalsSection;
       'section.lascana-section': SectionLascanaSection;
       'section.hero-section': SectionHeroSection;
       'section.hero-mobile-section': SectionHeroMobileSection;

@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "cookie_policies",
+  "info": {
+    "singularName": "cookie-policy",
+    "pluralName": "cookie-policies",
+    "displayName": "Cookie Policy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "entrySection": {
+      "displayName": "Entry Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "element.entry-section"
+    },
+    "legalsSection": {
+      "displayName": "Legals Section",
+      "type": "component",
+      "repeatable": true,
+      "component": "section.legals-section"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}
