@@ -36,6 +36,223 @@ export interface SharedMetaSocial extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionStatisticsSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_statistics_sections';
+  info: {
+    displayName: 'Statistics Section';
+    icon: 'paintBrush';
+    description: '';
+  };
+  attributes: {
+    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+    socialStatisticsBlock: Schema.Attribute.Component<
+      'element.social-statistics-block',
+      true
+    >;
+  };
+}
+
+export interface SectionPodcastSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_podcast_sections';
+  info: {
+    displayName: 'Podcast Section';
+    icon: 'typhoon';
+  };
+  attributes: {
+    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+    gallery: Schema.Attribute.Component<'element.gallery', true>;
+  };
+}
+
+export interface SectionOnlyfansSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_onlyfans_sections';
+  info: {
+    displayName: 'Onlyfans Section';
+    icon: 'landscape';
+    description: '';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+  };
+}
+
+export interface SectionLegalsSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_legals_sections';
+  info: {
+    displayName: 'Legals Section';
+    icon: 'priceTag';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
+  };
+}
+
+export interface SectionLascanaSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_lascana_sections';
+  info: {
+    displayName: 'Lascana Section';
+    icon: 'expand';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    button: Schema.Attribute.Component<'element.button', false>;
+    gallery: Schema.Attribute.Component<'element.gallery', true>;
+    lascanaIcon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
+export interface SectionHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+    icon: 'layer';
+    description: '';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    name: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    button: Schema.Attribute.Component<'element.button', false>;
+    socials: Schema.Attribute.Component<'element.socials', true>;
+    partners: Schema.Attribute.Component<'element.partners', true>;
+  };
+}
+
+export interface SectionHeroMobileSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_hero_mobile_sections';
+  info: {
+    displayName: 'Hero Mobile Section';
+    icon: 'message';
+    description: '';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    badge: Schema.Attribute.Component<'element.badge', false>;
+    Tip: Schema.Attribute.String;
+    socials: Schema.Attribute.Component<'element.socials', true>;
+    name: Schema.Attribute.String;
+    verifiedTicket: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
+export interface SectionHeader extends Struct.ComponentSchema {
+  collectionName: 'components_section_headers';
+  info: {
+    displayName: 'Header';
+    icon: 'code';
+    description: '';
+  };
+  attributes: {
+    menuItems: Schema.Attribute.Component<'element.menu-items', true>;
+    socials: Schema.Attribute.Component<'element.socials', true>;
+    button: Schema.Attribute.Component<'element.button', true>;
+    headerlogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
+export interface SectionFooter extends Struct.ComponentSchema {
+  collectionName: 'components_section_footers';
+  info: {
+    displayName: 'Footer';
+    icon: 'envelop';
+    description: '';
+  };
+  attributes: {
+    kapsysText: Schema.Attribute.String;
+    kapsysLogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    kapsysLogoLink: Schema.Attribute.String;
+    FooterText: Schema.Attribute.String;
+    socials: Schema.Attribute.Component<'element.socials', true>;
+    button: Schema.Attribute.Component<'element.button', false>;
+    kapsysLogoText: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
+export interface SectionExclusiveContentBlockMobileSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_section_exclusive_content_block_mobile_sections';
+  info: {
+    displayName: 'Exclusive Content Block Mobile Section';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'element.button', true>;
+    title: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    overlayIcon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    overlayText: Schema.Attribute.String;
+    gallery: Schema.Attribute.Component<'element.gallery', true>;
+  };
+}
+
+export interface SectionContactSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_contact_sections';
+  info: {
+    displayName: 'Contact Section';
+    icon: 'database';
+    description: '';
+  };
+  attributes: {
+    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+    form: Schema.Attribute.Component<'element.form', false>;
+  };
+}
+
+export interface SectionBrandsSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_brands_sections';
+  info: {
+    displayName: 'Brands Section';
+    icon: 'plane';
+  };
+  attributes: {
+    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+    partners: Schema.Attribute.Component<'element.partners', true>;
+  };
+}
+
+export interface SectionAboutSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_about_sections';
+  info: {
+    displayName: 'About Section';
+    icon: 'stack';
+    description: '';
+  };
+  attributes: {
+    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
+    gallery: Schema.Attribute.Component<'element.gallery', true>;
+  };
+}
+
 export interface ElementSocials extends Struct.ComponentSchema {
   collectionName: 'components_element_socials';
   info: {
@@ -195,231 +412,11 @@ export interface ElementBadge extends Struct.ComponentSchema {
   };
 }
 
-export interface SectionStatisticsSection extends Struct.ComponentSchema {
-  collectionName: 'components_section_statistics_sections';
-  info: {
-    displayName: 'Statistics Section';
-    icon: 'paintBrush';
-    description: '';
-  };
-  attributes: {
-    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
-    socialStatisticsBlock: Schema.Attribute.Component<
-      'element.social-statistics-block',
-      true
-    >;
-  };
-}
-
-export interface SectionPodcastSection extends Struct.ComponentSchema {
-  collectionName: 'components_section_podcast_sections';
-  info: {
-    displayName: 'Podcast Section';
-    icon: 'typhoon';
-  };
-  attributes: {
-    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
-    gallery: Schema.Attribute.Component<'element.gallery', true>;
-  };
-}
-
-export interface SectionOnlyfansSection extends Struct.ComponentSchema {
-  collectionName: 'components_section_onlyfans_sections';
-  info: {
-    displayName: 'Onlyfans Section';
-    icon: 'landscape';
-    description: '';
-  };
-  attributes: {
-    backgroundImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
-  };
-}
-
-export interface SectionLegalsSection extends Struct.ComponentSchema {
-  collectionName: 'components_section_legals_sections';
-  info: {
-    displayName: 'Legals Section';
-    icon: 'priceTag';
-  };
-  attributes: {
-    title: Schema.Attribute.String;
-    description: Schema.Attribute.Blocks;
-  };
-}
-
-export interface SectionLascanaSection extends Struct.ComponentSchema {
-  collectionName: 'components_section_lascana_sections';
-  info: {
-    displayName: 'Lascana Section';
-    icon: 'expand';
-    description: '';
-  };
-  attributes: {
-    title: Schema.Attribute.String;
-    description: Schema.Attribute.Text;
-    button: Schema.Attribute.Component<'element.button', false>;
-    gallery: Schema.Attribute.Component<'element.gallery', true>;
-    lascanaIcon: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-  };
-}
-
-export interface SectionHeroSection extends Struct.ComponentSchema {
-  collectionName: 'components_section_hero_sections';
-  info: {
-    displayName: 'Hero Section';
-    icon: 'layer';
-    description: '';
-  };
-  attributes: {
-    backgroundImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    name: Schema.Attribute.String;
-    title: Schema.Attribute.String;
-    description: Schema.Attribute.Text;
-    button: Schema.Attribute.Component<'element.button', false>;
-    socials: Schema.Attribute.Component<'element.socials', true>;
-    partners: Schema.Attribute.Component<'element.partners', true>;
-  };
-}
-
-export interface SectionHeroMobileSection extends Struct.ComponentSchema {
-  collectionName: 'components_section_hero_mobile_sections';
-  info: {
-    displayName: 'Hero Mobile Section';
-    icon: 'message';
-    description: '';
-  };
-  attributes: {
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    badge: Schema.Attribute.Component<'element.badge', false>;
-    Tip: Schema.Attribute.String;
-    socials: Schema.Attribute.Component<'element.socials', true>;
-    name: Schema.Attribute.String;
-    verifiedTicket: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-  };
-}
-
-export interface SectionHeader extends Struct.ComponentSchema {
-  collectionName: 'components_section_headers';
-  info: {
-    displayName: 'Header';
-    icon: 'code';
-    description: '';
-  };
-  attributes: {
-    menuItems: Schema.Attribute.Component<'element.menu-items', true>;
-    socials: Schema.Attribute.Component<'element.socials', true>;
-    button: Schema.Attribute.Component<'element.button', true>;
-    headerlogo: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-  };
-}
-
-export interface SectionFooter extends Struct.ComponentSchema {
-  collectionName: 'components_section_footers';
-  info: {
-    displayName: 'Footer';
-    icon: 'envelop';
-    description: '';
-  };
-  attributes: {
-    kapsysText: Schema.Attribute.String;
-    kapsysLogo: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    kapsysLogoLink: Schema.Attribute.String;
-    FooterText: Schema.Attribute.String;
-    socials: Schema.Attribute.Component<'element.socials', true>;
-    button: Schema.Attribute.Component<'element.button', false>;
-    kapsysLogoText: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-  };
-}
-
-export interface SectionExclusiveContentBlockMobileSection
-  extends Struct.ComponentSchema {
-  collectionName: 'components_section_exclusive_content_block_mobile_sections';
-  info: {
-    displayName: 'Exclusive Content Block Mobile Section';
-    icon: 'apps';
-    description: '';
-  };
-  attributes: {
-    button: Schema.Attribute.Component<'element.button', true>;
-    title: Schema.Attribute.String;
-    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    overlayIcon: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    overlayText: Schema.Attribute.String;
-    gallery: Schema.Attribute.Component<'element.gallery', true>;
-  };
-}
-
-export interface SectionContactSection extends Struct.ComponentSchema {
-  collectionName: 'components_section_contact_sections';
-  info: {
-    displayName: 'Contact Section';
-    icon: 'database';
-    description: '';
-  };
-  attributes: {
-    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
-    form: Schema.Attribute.Component<'element.form', false>;
-  };
-}
-
-export interface SectionBrandsSection extends Struct.ComponentSchema {
-  collectionName: 'components_section_brands_sections';
-  info: {
-    displayName: 'Brands Section';
-    icon: 'plane';
-  };
-  attributes: {
-    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
-    partners: Schema.Attribute.Component<'element.partners', true>;
-  };
-}
-
-export interface SectionAboutSection extends Struct.ComponentSchema {
-  collectionName: 'components_section_about_sections';
-  info: {
-    displayName: 'About Section';
-    icon: 'stack';
-    description: '';
-  };
-  attributes: {
-    entrySection: Schema.Attribute.Component<'element.entry-section', false>;
-    gallery: Schema.Attribute.Component<'element.gallery', true>;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
-      'element.socials': ElementSocials;
-      'element.social-statistics-block': ElementSocialStatisticsBlock;
-      'element.partners': ElementPartners;
-      'element.menu-items': ElementMenuItems;
-      'element.gallery': ElementGallery;
-      'element.form': ElementForm;
-      'element.form-inputs': ElementFormInputs;
-      'element.exclusive-content': ElementExclusiveContent;
-      'element.entry-section': ElementEntrySection;
-      'element.button': ElementButton;
-      'element.badge': ElementBadge;
       'section.statistics-section': SectionStatisticsSection;
       'section.podcast-section': SectionPodcastSection;
       'section.onlyfans-section': SectionOnlyfansSection;
@@ -433,6 +430,17 @@ declare module '@strapi/strapi' {
       'section.contact-section': SectionContactSection;
       'section.brands-section': SectionBrandsSection;
       'section.about-section': SectionAboutSection;
+      'element.socials': ElementSocials;
+      'element.social-statistics-block': ElementSocialStatisticsBlock;
+      'element.partners': ElementPartners;
+      'element.menu-items': ElementMenuItems;
+      'element.gallery': ElementGallery;
+      'element.form': ElementForm;
+      'element.form-inputs': ElementFormInputs;
+      'element.exclusive-content': ElementExclusiveContent;
+      'element.entry-section': ElementEntrySection;
+      'element.button': ElementButton;
+      'element.badge': ElementBadge;
     }
   }
 }

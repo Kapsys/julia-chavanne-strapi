@@ -501,6 +501,7 @@ export interface ApiCookiePolicyCookiePolicy extends Struct.SingleTypeSchema {
     singularName: 'cookie-policy';
     pluralName: 'cookie-policies';
     displayName: 'Cookie Policy';
+    description: '';
   };
   options: {
     draftAndPublish: true;

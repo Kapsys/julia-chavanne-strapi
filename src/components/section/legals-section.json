@@ -2,7 +2,8 @@
   "collectionName": "components_section_legals_sections",
   "info": {
     "displayName": "Legals Section",
-    "icon": "priceTag"
+    "icon": "priceTag",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,7 +11,12 @@
       "type": "string"
     },
     "description": {
-      "type": "blocks"
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
