@@ -24,7 +24,7 @@
     "kapsysLogoLink": {
       "type": "string"
     },
-    "FooterText": {
+    "footerText": {
       "type": "string"
     },
     "socials": {
@@ -38,14 +38,21 @@
       "component": "element.button"
     },
     "kapsysLogoText": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "menuItems": {
+      "displayName": "Menu Items",
+      "type": "component",
+      "repeatable": true,
+      "component": "element.menu-items"
     }
   }
 }
