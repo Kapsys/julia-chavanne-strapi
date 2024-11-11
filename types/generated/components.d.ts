@@ -36,6 +36,165 @@ export interface SharedMetaSocial extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementSocials extends Struct.ComponentSchema {
+  collectionName: 'components_element_socials';
+  info: {
+    displayName: 'Socials';
+    icon: 'user';
+    description: '';
+  };
+  attributes: {
+    socialIcon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    socialUrl: Schema.Attribute.String;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    socialColoredIcon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementSocialStatisticsBlock extends Struct.ComponentSchema {
+  collectionName: 'components_element_social_statistics_blocks';
+  info: {
+    displayName: 'Social statistics block';
+    icon: 'link';
+    description: '';
+  };
+  attributes: {
+    socials: Schema.Attribute.Component<'element.socials', false>;
+    number: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+    button: Schema.Attribute.Component<'element.button', false>;
+  };
+}
+
+export interface ElementPartners extends Struct.ComponentSchema {
+  collectionName: 'components_element_partners';
+  info: {
+    displayName: 'Partners';
+  };
+  attributes: {
+    partnerLogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    partnerLink: Schema.Attribute.String;
+  };
+}
+
+export interface ElementMenuItems extends Struct.ComponentSchema {
+  collectionName: 'components_element_menu_items';
+  info: {
+    displayName: 'Menu Items';
+    icon: 'cast';
+    description: '';
+  };
+  attributes: {
+    menuItem: Schema.Attribute.String;
+    menuItemUrl: Schema.Attribute.String;
+  };
+}
+
+export interface ElementGallery extends Struct.ComponentSchema {
+  collectionName: 'components_element_galleries';
+  info: {
+    displayName: 'Gallery';
+    icon: 'filter';
+    description: '';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface ElementForm extends Struct.ComponentSchema {
+  collectionName: 'components_element_forms';
+  info: {
+    displayName: 'Form';
+    icon: 'house';
+    description: '';
+  };
+  attributes: {
+    formInputs: Schema.Attribute.Component<'element.form-inputs', true>;
+    checkboxText: Schema.Attribute.String;
+    privacyPolicyText: Schema.Attribute.String;
+    privacyPolicyUrl: Schema.Attribute.String;
+    button: Schema.Attribute.Component<'element.button', false>;
+  };
+}
+
+export interface ElementFormInputs extends Struct.ComponentSchema {
+  collectionName: 'components_element_form_inputs';
+  info: {
+    displayName: 'Form Inputs';
+    icon: 'write';
+    description: '';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<['text', 'phone', 'email', 'textarea']>;
+  };
+}
+
+export interface ElementExclusiveContent extends Struct.ComponentSchema {
+  collectionName: 'components_element_exclusive_contents';
+  info: {
+    displayName: 'Exclusive Content';
+    icon: 'earth';
+    description: '';
+  };
+  attributes: {};
+}
+
+export interface ElementEntrySection extends Struct.ComponentSchema {
+  collectionName: 'components_element_entry_sections';
+  info: {
+    displayName: 'Entry Section';
+    icon: 'dashboard';
+    description: '';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    button: Schema.Attribute.Component<'element.button', true>;
+  };
+}
+
+export interface ElementButton extends Struct.ComponentSchema {
+  collectionName: 'components_element_buttons';
+  info: {
+    displayName: 'Button';
+    icon: 'clock';
+  };
+  attributes: {
+    buttonName: Schema.Attribute.String;
+    buttonUrl: Schema.Attribute.String;
+    buttonIcon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
+export interface ElementBadge extends Struct.ComponentSchema {
+  collectionName: 'components_element_badges';
+  info: {
+    displayName: 'Badge';
+    icon: 'dashboard';
+    description: '';
+  };
+  attributes: {
+    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    country: Schema.Attribute.String;
+  };
+}
+
 export interface SectionStatisticsSection extends Struct.ComponentSchema {
   collectionName: 'components_section_statistics_sections';
   info: {
@@ -245,170 +404,22 @@ export interface SectionAboutSection extends Struct.ComponentSchema {
   };
 }
 
-export interface ElementSocials extends Struct.ComponentSchema {
-  collectionName: 'components_element_socials';
-  info: {
-    displayName: 'Socials';
-    icon: 'user';
-    description: '';
-  };
-  attributes: {
-    socialIcon: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    socialUrl: Schema.Attribute.String;
-    image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    socialColoredIcon: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface ElementSocialStatisticsBlock extends Struct.ComponentSchema {
-  collectionName: 'components_element_social_statistics_blocks';
-  info: {
-    displayName: 'Social statistics block';
-    icon: 'link';
-    description: '';
-  };
-  attributes: {
-    socials: Schema.Attribute.Component<'element.socials', false>;
-    number: Schema.Attribute.String;
-    text: Schema.Attribute.String;
-    button: Schema.Attribute.Component<'element.button', false>;
-  };
-}
-
-export interface ElementPartners extends Struct.ComponentSchema {
-  collectionName: 'components_element_partners';
-  info: {
-    displayName: 'Partners';
-  };
-  attributes: {
-    partnerLogo: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    partnerLink: Schema.Attribute.String;
-  };
-}
-
-export interface ElementMenuItems extends Struct.ComponentSchema {
-  collectionName: 'components_element_menu_items';
-  info: {
-    displayName: 'Menu Items';
-    icon: 'cast';
-    description: '';
-  };
-  attributes: {
-    menuItem: Schema.Attribute.String;
-    menuItemUrl: Schema.Attribute.String;
-  };
-}
-
-export interface ElementGallery extends Struct.ComponentSchema {
-  collectionName: 'components_element_galleries';
-  info: {
-    displayName: 'Gallery';
-    icon: 'filter';
-    description: '';
-  };
-  attributes: {
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-  };
-}
-
-export interface ElementForm extends Struct.ComponentSchema {
-  collectionName: 'components_element_forms';
-  info: {
-    displayName: 'Form';
-    icon: 'house';
-    description: '';
-  };
-  attributes: {
-    formInputs: Schema.Attribute.Component<'element.form-inputs', true>;
-    checkboxText: Schema.Attribute.String;
-    privacyPolicyText: Schema.Attribute.String;
-    privacyPolicyUrl: Schema.Attribute.String;
-    button: Schema.Attribute.Component<'element.button', false>;
-  };
-}
-
-export interface ElementFormInputs extends Struct.ComponentSchema {
-  collectionName: 'components_element_form_inputs';
-  info: {
-    displayName: 'Form Inputs';
-    icon: 'write';
-    description: '';
-  };
-  attributes: {
-    name: Schema.Attribute.String;
-    placeholder: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<['text', 'phone', 'email', 'textarea']>;
-  };
-}
-
-export interface ElementExclusiveContent extends Struct.ComponentSchema {
-  collectionName: 'components_element_exclusive_contents';
-  info: {
-    displayName: 'Exclusive Content';
-    icon: 'earth';
-    description: '';
-  };
-  attributes: {};
-}
-
-export interface ElementEntrySection extends Struct.ComponentSchema {
-  collectionName: 'components_element_entry_sections';
-  info: {
-    displayName: 'Entry Section';
-    icon: 'dashboard';
-    description: '';
-  };
-  attributes: {
-    subtitle: Schema.Attribute.String;
-    title: Schema.Attribute.String;
-    description: Schema.Attribute.Text;
-    button: Schema.Attribute.Component<'element.button', true>;
-  };
-}
-
-export interface ElementButton extends Struct.ComponentSchema {
-  collectionName: 'components_element_buttons';
-  info: {
-    displayName: 'Button';
-    icon: 'clock';
-  };
-  attributes: {
-    buttonName: Schema.Attribute.String;
-    buttonUrl: Schema.Attribute.String;
-    buttonIcon: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-  };
-}
-
-export interface ElementBadge extends Struct.ComponentSchema {
-  collectionName: 'components_element_badges';
-  info: {
-    displayName: 'Badge';
-    icon: 'dashboard';
-    description: '';
-  };
-  attributes: {
-    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    country: Schema.Attribute.String;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
+      'element.socials': ElementSocials;
+      'element.social-statistics-block': ElementSocialStatisticsBlock;
+      'element.partners': ElementPartners;
+      'element.menu-items': ElementMenuItems;
+      'element.gallery': ElementGallery;
+      'element.form': ElementForm;
+      'element.form-inputs': ElementFormInputs;
+      'element.exclusive-content': ElementExclusiveContent;
+      'element.entry-section': ElementEntrySection;
+      'element.button': ElementButton;
+      'element.badge': ElementBadge;
       'section.statistics-section': SectionStatisticsSection;
       'section.podcast-section': SectionPodcastSection;
       'section.onlyfans-section': SectionOnlyfansSection;
@@ -422,17 +433,6 @@ declare module '@strapi/strapi' {
       'section.contact-section': SectionContactSection;
       'section.brands-section': SectionBrandsSection;
       'section.about-section': SectionAboutSection;
-      'element.socials': ElementSocials;
-      'element.social-statistics-block': ElementSocialStatisticsBlock;
-      'element.partners': ElementPartners;
-      'element.menu-items': ElementMenuItems;
-      'element.gallery': ElementGallery;
-      'element.form': ElementForm;
-      'element.form-inputs': ElementFormInputs;
-      'element.exclusive-content': ElementExclusiveContent;
-      'element.entry-section': ElementEntrySection;
-      'element.button': ElementButton;
-      'element.badge': ElementBadge;
     }
   }
 }
