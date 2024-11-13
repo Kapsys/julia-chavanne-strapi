@@ -17,6 +17,12 @@
         "preset": "standard"
       },
       "customField": "plugin::ckeditor.CKEditor"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "newContent": {
+      "type": "blocks"
     }
   }
 }

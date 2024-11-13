@@ -96,6 +96,8 @@ export interface SectionLegalsSection extends Struct.ComponentSchema {
           preset: 'standard';
         }
       >;
+    content: Schema.Attribute.RichText;
+    newContent: Schema.Attribute.Blocks;
   };
 }
 
