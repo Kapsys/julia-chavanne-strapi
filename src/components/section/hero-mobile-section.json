@@ -25,7 +25,7 @@
       "component": "element.badge"
     },
     "Tip": {
-      "type": "string"
+      "type": "text"
     },
     "socials": {
       "type": "component",
@@ -36,14 +36,15 @@
       "type": "string"
     },
     "verifiedTicket": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

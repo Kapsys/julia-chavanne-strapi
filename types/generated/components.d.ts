@@ -147,7 +147,7 @@ export interface SectionHeroMobileSection extends Struct.ComponentSchema {
   attributes: {
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     badge: Schema.Attribute.Component<'element.badge', false>;
-    Tip: Schema.Attribute.String;
+    Tip: Schema.Attribute.Text;
     socials: Schema.Attribute.Component<'element.socials', true>;
     name: Schema.Attribute.String;
     verifiedTicket: Schema.Attribute.Media<
